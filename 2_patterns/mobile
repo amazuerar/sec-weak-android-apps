@@ -1,0 +1,1 @@
+"(?i)(information.exposure|sensitive.(?:information|data|communication)|unnecessary.privileges|improper.(?:validation|verification|export|authorization)|cleartext|private.personal.information|private.information|personal.information|shared.resource|logic.bomb|time.bomb|hard[-| ]coded.credentials|hard[-| ]coded|access.control)"

@@ -1,0 +1,7 @@
+SELECT repo.name, MAX(CAST(JSON_EXTRACT_SCALAR(payload, '$.pull_request.base.repo.stargazers_count')AS INT64)) stars
+FROM `githubarchive.month.YYYYMM`  
+WHERE JSON_EXTRACT_SCALAR(payload, '$.pull_request.base.repo.language') = 'LANG'
+AND type='PullRequestEvent'
+GROUP by repo.name
+ORDER BY stars DESC
+LIMIT N
